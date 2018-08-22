@@ -8,7 +8,8 @@ int main(int argc,char *argv[])
     int respt;
     
 
-    
+        
+	printf("--Escoja el servicio que desea utilizar--\n");
 	printf("--Escoja su signo--\n");
 	printf("1.- Piscis\n");
 	printf("2.- Tauro\n");
