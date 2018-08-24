@@ -47,7 +47,7 @@ int main(int argc,char *argv[])
                                     
             
             /**/
-            /*funcion_calculadora_horoscopo();*/
+            calculadora_horoscopo(d,m,a);
             /**/
 
     		break;

@@ -1,5 +1,96 @@
-void calculadora(){
+void calculadora_horoscopo(unsigned d, unsigned m,unsigned a){
 	
+	if(d>=20 && m==1){
+		if(d<=18 && m==2){
+			//Enero 20 – Febrero 18-> acuario
+	        //printf("sus signo es acuario");
+		}
+	}
+		if(d>=19 && m==2){
+	     	if(d<=20 && m==3){
+			//Febrero 19 – Marzo 20
+	        //printf("sus signo es piscis");
+		}
+	}
+	
+		if(d>=21 && m==3){
+		      if(d<=19 && m==4){
+		    	//Marzo 21 –Abril 19
+	            //printf("sus signo es aries");
+		}
+	}
+	
+		if(d>=20 && m==1){
+	        	if(d<=18 && m==2){
+		        	//Enero 20 – Febrero 18-> acuario
+	                //printf("sus signo es acuario");
+		}
+	}
+	
+		if(d>=20 && m==1){
+		if(d<=18 && m==2){
+			//Enero 20 – Febrero 18-> acuario
+	        //printf("sus signo es acuario");
+		}
+	}
+	
+		if(d>=20 && m==1){
+		if(d<=18 && m==2){
+			//Enero 20 – Febrero 18-> acuario
+	        //printf("sus signo es acuario");
+		}
+	}	if(d>=20 && m==1){
+		if(d<=18 && m==2){
+			//Enero 20 – Febrero 18-> acuario
+	        //printf("sus signo es acuario");
+		}
+	}
+	
+		if(d>=20 && m==1){
+		if(d<=18 && m==2){
+			//Enero 20 – Febrero 18-> acuario
+	        //printf("sus signo es acuario");
+		}
+	}
+	
+		if(d>=20 && m==1){
+		if(d<=18 && m==2){
+			//Enero 20 – Febrero 18-> acuario
+	        //printf("sus signo es acuario");
+		}
+	}
+	
+		if(d>=20 && m==1){
+		if(d<=18 && m==2){
+			//Enero 20 – Febrero 18-> acuario
+	        //printf("sus signo es acuario");
+		}
+	}
+		if(d>=20 && m==1){
+		if(d<=18 && m==2){
+			//Enero 20 – Febrero 18-> acuario
+	        //printf("sus signo es acuario");
+		}
+	}
+	
+		if(d>=20 && m==1){
+		if(d<=18 && m==2){
+			//Enero 20 – Febrero 18-> acuario
+	        //printf("sus signo es acuario");
+		}
+	}
+	
+		if(d>=20 && m==1){
+		if(d<=18 && m==2){
+			//Enero 20 – Febrero 18-> acuario
+	        //printf("sus signo es acuario");
+		}
+	}
+	
+	
+	else if(d==19){
+		//Febrero 19 – Marzo 20 ->piscis
+	}
 }
 
 
