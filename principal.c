@@ -3,88 +3,82 @@ francisco uribe
 pablo peña
 herman fernandez
 */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "funcion.h"
+
 int main(int argc,char *argv[])
 {	
 
 //int dia,mes,anio;
     int respt;
-    
-
-    
-	printf("--Escoja el servicio que desea utilizar--\n");
-	printf("1.- calculadora de signo\n");
-	printf("2.- Tauro\n");
-	printf("3.- Geminis\n");
-	printf("4.- Cancer\n");
-	printf("5.- Leo\n");
-	printf("6.- Virgo\n");
-	printf("7.- Librar\n");	
-	printf("8.- Escorpion\n");
-	printf("9.- Sagitario\n");
-	printf("10.- Capricornio\n");
-	printf("11.- Acuario\n");
-	printf("12.- Calcular Area de un circulo\n");
-	printf("0.- Salir\n");
+ 
+    printf("--Servicios--\n");
+	printf("1.- Calculadora de signo del zodiaco\n");
+	printf("2.- Horóscopo de la semana\n");
+	printf("3.- Compatibilidad entre Signos\n");
+	printf("4.- Conoce tu Horóscopo chinoy tu galleta\n");
+	printf("5.- Salir\n");
+	printf("Respuesta: ");
 	scanf("%i",&respt);fflush(stdin);
 
-
+/*funciones modulares implementadas en funciones.h*/
     switch(respt){
 				
 			case 1:
-    		printf("piscis");
+    		    char linea[MAX_CHARS];
+                        unsigned d;
+                        unsigned m;
+                        unsigned a;
+   
+                            puts("Introduce la fecha en formato dd/mm/aaaa:");
+                            if(fgets(linea, MAX_CHARS, stdin) == NULL)
+                                            return EXIT_FAILURE;
+                            if(sscanf(linea, "%2u/%2u/%4u", &d, &m, &a) == 3){
+               /* 
+                  ** Primera validacion fue exitosa, falta verificar 
+                  ** que los tres enteros esten en el rango valido
+               */
+                            printf("Dia: %u\nMes: %u\nAnio: %u\n", d, m, a);
+                                             }else
+                            puts("Entrada no valida");
+                                    return EXIT_SUCCESS;
+                                    
+                                    
+            
+            /**/
+            /*funcion_calculadora_horoscopo();*/
+            /**/
+
     		break;
-    		
+ /****************************************************************************************/   		
     		case 2:
-    		printf("tauro");
+    			
     		break;
     		
-    		
+/****************************************************************************************/    		
     		case 3:
-    		printf("geminis");
+    			
     		break;
     		
-    		
+/****************************************************************************************/   		
     		case 4:
-    		printf("cancer");
+    			
     		break;
-    		
+/****************************************************************************************/  		
     		case 5:
-    		printf("leo");
+    			
     		break;
     		
     		case 6:
-    		printf("libra");
     		break;
     		
     		case 7:
-    		printf("escorpion");
     		break;
     		
     		case 8:
-    		printf("sagitario");
     		break;
     		
-    		case 9:
-    		printf("capricornio");
-    		break;
-    		
-    		case 10:
-    		printf("acuario");
-    		break;
-    		
-    		case 11:
-    		printf("aries");
-    		break;
-    		
-    		
-        	case 12:
-    	    printf("virgo");
-    		break;
     }
 system("pause");
 }
