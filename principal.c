@@ -1,3 +1,10 @@
+/*
+francisco uribe
+pablo peña
+herman fernandez
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "funcion.h"
