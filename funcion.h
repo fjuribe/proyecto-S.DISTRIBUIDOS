@@ -1,3 +1,5 @@
+
+//primer servicio del sistema hóroscopo
 void calculadora_horoscopo(unsigned d, unsigned m,unsigned a){
 	
 	if(d>=20 && m==1){
@@ -20,29 +22,31 @@ void calculadora_horoscopo(unsigned d, unsigned m,unsigned a){
 		}
 	}
 	
-		if(d>=20 && m==1){
-	        	if(d<=18 && m==2){
-		        	//Enero 20 – Febrero 18-> acuario
+		 if(d>=20 && m==4){
+	          if(d<=20 && m==5){
+		        //Abril 20 – Mayo 20-> tauro
+	            //printf("sus signo es tauro");
+		}
+	}
+	
+		if(d>=21 && m==5){
+	        	if(d<=20 && m==6){
+		        	//Mayo 21 – Junio 20 -> geminis
+	                //printf("sus signo es geminis");
+		}
+	}
+	
+
+		if(d>=20 && m==6){
+		        if(d<=18 && m==7){
+		         	//Enero 20 – Febrero 18-> acuario
 	                //printf("sus signo es acuario");
 		}
-	}
-	
-		if(d>=20 && m==1){
-		if(d<=18 && m==2){
-			//Enero 20 – Febrero 18-> acuario
-	        //printf("sus signo es acuario");
-		}
-	}
-	
-		if(d>=20 && m==1){
-		if(d<=18 && m==2){
-			//Enero 20 – Febrero 18-> acuario
-	        //printf("sus signo es acuario");
-		}
-	}	if(d>=20 && m==1){
-		if(d<=18 && m==2){
-			//Enero 20 – Febrero 18-> acuario
-	        //printf("sus signo es acuario");
+	}	
+	        if(d>=20 && m==1){
+		          if(d<=18 && m==2){
+	           		//Enero 20 – Febrero 18-> acuario
+	                //printf("sus signo es acuario");
 		}
 	}
 	
@@ -93,7 +97,7 @@ void calculadora_horoscopo(unsigned d, unsigned m,unsigned a){
 	}
 }
 
-
+//segundo servicio del sistema hóroscopo
 void horoscopo_semana(){
 	printf("--Escoja el servicio que desea utilizar--\n");
 	printf("--Escoja su signo--\n");
