@@ -1,4 +1,8 @@
-
+/*
+francisco uribe
+pablo peña
+herman fernandez
+*/
 //primer servicio del sistema hóroscopo
 void calculadora_horoscopo(unsigned d, unsigned m,unsigned a){
 	
