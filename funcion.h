@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 /*
 francisco uribe
 pablo peña
 herman fernandez
 */
+=======
+
+>>>>>>> ee6f2f3c7c69a753d5122087d8487fcfca6f7edd
 //primer servicio del sistema hóroscopo
 void calculadora_horoscopo(unsigned d, unsigned m,unsigned a){
 	
