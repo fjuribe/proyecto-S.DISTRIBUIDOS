@@ -12,6 +12,7 @@ int main(int argc,char *argv[])
 
 //int dia,mes,anio;
     int respt;
+    int d,m,a;
  
     printf("--Servicios--\n");
 	printf("1.- Calculadora de signo del zodiaco\n");
@@ -26,59 +27,48 @@ int main(int argc,char *argv[])
     switch(respt){
 				
 			case 1:
-    		    char linea[MAX_CHARS];
-                        unsigned d;
-                        unsigned m;
-                        unsigned a;
-   
-                            puts("Introduce la fecha en formato dd/mm/aaaa:");
-                            if(fgets(linea, MAX_CHARS, stdin) == NULL)
-                                            return EXIT_FAILURE;
-                            if(sscanf(linea, "%2u/%2u/%4u", &d, &m, &a) == 3){
-               /* 
-                  ** Primera validacion fue exitosa, falta verificar 
-                  ** que los tres enteros esten en el rango valido
-               */
-                            printf("Dia: %u\nMes: %u\nAnio: %u\n", d, m, a);
-                                             }else
-                            puts("Entrada no valida");
-                                    return EXIT_SUCCESS;
-                                    
-                                    
+    		  
+
+    printf( "\n   Introduzca d%ca: ", 161 );
+    scanf( "%d", &d );
+    printf( "\n   Introduzca mes: " );
+    scanf( "%d", &m );
+    printf( "\n   Introduzca a%co: ", 164 );
+    scanf( "%d", &a );
+
+    
             
             /**/
-            calculadora_horoscopo(d,m,a);
+            calculadora_horoscopo(d,m);
             /**/
 
     		break;
  /****************************************************************************************/   		
     		case 2:
-    			
+    				
+                 	printf("--Escoja su signo--\n");
+                	printf("1.- Piscis\n");
+	                printf("2.- Tauro\n");
+                 	printf("3.- Geminis\n");
+	                printf("4.- Cancer\n");
+	                printf("5.- Leo\n");
+	                printf("6.- Virgo\n");
+	                printf("7.- Librar\n");	
+	                printf("8.- Escorpion\n");
+	                printf("9.- Sagitario\n");
+	                printf("10.- Capricornio\n");
+	                printf("11.- Acuario\n");
+	                printf("12.- Calcular Area de un circulo\n");
+	                printf("0.- Salir\n");
+                    scanf("%i",&respt);fflush(stdin);
+                    	
+                    horoscopo_semana(respt);
     		break;
     		
 /****************************************************************************************/    		
-    		case 3:
-    			
-    		break;
-    		
-/****************************************************************************************/   		
-    		case 4:
-    			
-    		break;
-/****************************************************************************************/  		
-    		case 5:
-    			
-    		break;
-    		
-    		case 6:
-    		break;
-    		
-    		case 7:
-    		break;
-    		
-    		case 8:
-    		break;
-    		
+		
     }
+    
+    
 system("pause");
 }
