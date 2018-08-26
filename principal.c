@@ -62,7 +62,7 @@ int main(int argc,char *argv[])
 	                printf("0.- Salir\n");
                     scanf("%i",&respt);fflush(stdin);
                     	
-                    horoscopo_semana(respt);
+                   horoscopo_semana(respt);
     		break;
     		
 /****************************************************************************************/    		
@@ -70,5 +70,5 @@ int main(int argc,char *argv[])
     }
     
     
-system("pause");
+getchar();
 }

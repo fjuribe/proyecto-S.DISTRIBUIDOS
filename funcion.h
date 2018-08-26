@@ -151,7 +151,7 @@ void calculadora_horoscopo(unsigned d, unsigned m){
 
 
 //segundo servicio del sistema hóroscopo
- horoscopo_semana(int a){
+ void horoscopo_semana(int a){
 
 
     switch(a){

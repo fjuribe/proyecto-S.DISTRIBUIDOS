@@ -7,10 +7,10 @@ int main(int argc, char const *argv[])
 	MYSQL *conn; /* variable de conexión para MySQL */
 	MYSQL_RES *res; /* variable que contendra el resultado de la consuta */
 	MYSQL_ROW row; /* variable que contendra los campos por cada registro consultado */
-	char *server = "localhost"; /*direccion del servidor 127.0.0.1, localhost o direccion ip */
+	char *server = "127.0.0.1"; /*direccion del servidor 127.0.0.1, localhost o direccion ip */
 	char *user = "root"; /*usuario para consultar la base de datos */
-	char *password = "root"; /* contraseña para el usuario en cuestion */
-	char *database = "prueba"; /*nombre de la base de datos a consultar */
+	char *password = ""; /* contraseña para el usuario en cuestion */
+	char *database = "horoscopo"; /*nombre de la base de datos a consultar */
 	conn = mysql_init(NULL); /*inicializacion a nula la conexión */
 
 	/* conectar a la base de datos */
@@ -21,7 +21,7 @@ int main(int argc, char const *argv[])
 	}
 
 	/* enviar consulta SQL */
-	if (mysql_query(conn, "select * from datos"))
+	if (mysql_query(conn, "select * from signo"))
 	{ /* definicion de la consulta y el origen de la conexion */
 		fprintf(stderr, "%s\n", mysql_error(conn));
 		exit(1);
@@ -29,7 +29,7 @@ int main(int argc, char const *argv[])
     
      //obtiene los resultados
 	res = mysql_use_result(conn);
-	printf("ID\tNombre\t\tedad\n");
+	printf("id_signo\tNombre\t\tpersonalidad\n");
 	
 	/*ciclo para recorrer la variables res con todos los registros obtenidos para su uso*/
     while((row=mysql_fetch_row(res))!=NULL)
