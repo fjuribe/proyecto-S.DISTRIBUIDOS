@@ -5,6 +5,7 @@ herman fernandez
 */
 #include <stdio.h>
 #include <stdlib.h>
+#include <mysql/mysql.h>
 #include "funcion.h"
 
 int main(int argc,char *argv[])
@@ -27,7 +28,7 @@ int main(int argc,char *argv[])
     switch(respt){
 				
 			case 1:
-    		  
+    system("clear");		  
 
     printf( "\n   Introduzca d%ca: ", 161 );
     scanf( "%d", &d );
@@ -46,6 +47,7 @@ int main(int argc,char *argv[])
  /****************************************************************************************/   		
     		case 2:
     				
+                    system("clear");
                  	printf("--Escoja su signo--\n");
                 	printf("1.- Piscis\n");
 	                printf("2.- Tauro\n");
