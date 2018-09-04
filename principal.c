@@ -5,14 +5,16 @@ herman fernandez
 */
 #include <stdio.h>
 #include <stdlib.h>
+#include <mysql/mysql.h>
 #include "funcion.h"
 
 int main(int argc,char *argv[])
 {	
 
 //int dia,mes,anio;
-    int respt;
+    int respt,genero;
     int d,m,a;
+
  
     printf("--Servicios--\n");
 	printf("1.- Calculadora de signo del zodiaco\n");
@@ -24,10 +26,10 @@ int main(int argc,char *argv[])
 	scanf("%i",&respt);fflush(stdin);
 
 /*funciones modulares implementadas en funciones.h*/
-    switch(respt){
+switch(respt){
 				
-			case 1:
-    		  
+	case 1:
+    system("clear");		  
 
     printf( "\n   Introduzca d%ca: ", 161 );
     scanf( "%d", &d );
@@ -44,8 +46,9 @@ int main(int argc,char *argv[])
 
     		break;
  /****************************************************************************************/   		
-    		case 2:
+    case 2:
     				
+                    system("clear");
                  	printf("--Escoja su signo--\n");
                 	printf("1.- Piscis\n");
 	                printf("2.- Tauro\n");
@@ -58,17 +61,33 @@ int main(int argc,char *argv[])
 	                printf("9.- Sagitario\n");
 	                printf("10.- Capricornio\n");
 	                printf("11.- Acuario\n");
-	                printf("12.- Calcular Area de un circulo\n");
+	                printf("12.- Aries\n");
 	                printf("0.- Salir\n");
                     scanf("%i",&respt);fflush(stdin);
                     	
-                    horoscopo_semana(respt);
+                   horoscopo_semana(respt);
     		break;
     		
 /****************************************************************************************/    		
-		
+	case 4:
+       
+    system("clear");       
+    printf("horoscopo chino\n");
+    printf( "\n   Introduzca d%ca: ", 161 );
+    scanf( "%d", &d );
+    printf( "\n   Introduzca mes: " );
+    scanf( "%d", &m );
+    printf( "\n   Introduzca a%co: ", 164 );
+    scanf( "%d", &a );
+    
+    printf("Introduzca: 1) si es hombre -- 2) si es mujer\t");
+    scanf("%d",&genero);
+
+    horoscopo_chino(d,m,a,genero);
+    
+    break;	
     }
     
     
-system("pause");
+getchar();
 }

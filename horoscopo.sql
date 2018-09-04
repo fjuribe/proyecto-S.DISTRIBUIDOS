@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
--- https://www.phpmyadmin.net/
+-- version 4.5.2
+-- http://www.phpmyadmin.net
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 26-08-2018 a las 03:12:12
--- Versión del servidor: 10.1.28-MariaDB
--- Versión de PHP: 7.1.10
+-- Servidor: localhost
+-- Tiempo de generación: 03-09-2018 a las 05:38:02
+-- Versión del servidor: 10.1.13-MariaDB
+-- Versión de PHP: 5.6.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -21,6 +19,63 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `horoscopo`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `galleta`
+--
+
+CREATE TABLE `galleta` (
+  `id` int(11) NOT NULL,
+  `mensaje` varchar(300) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `galleta`
+--
+
+INSERT INTO `galleta` (`id`, `mensaje`) VALUES
+(1, 'Vivirás tu vejez con comodidades y riquezas materiales.'),
+(2, 'Confía en tu suerte, que es mucha y te rodeara de prosperidad.'),
+(3, 'No todo el mundo puede recibir las mismas cosas. Se practico.'),
+(4, 'Te aguarda una larga y feliz vida.'),
+(5, 'Hoy es el momento de explorar: no temas.'),
+(6, 'Muy pronto seras incluido en muchas reuniones, fiestas y tertulias.'),
+(7, 'Cuando busques lo que mas deseas, recuerda hacer tu mejor esfuerzo.'),
+(8, 'Tienes por delante un maravilloso día para triunfar; disfrútalo y compártelo.'),
+(9, 'Hoy seras reconocido por tus dones especiales y lograras ser feliz por muchas horas.\r\n'),
+(10, 'Tu corazón estallara de alegría con la llegada de buenas noticias.'),
+(11, 'Mañana puede ser muy tarde para disfrutar lo que tienes hoy.'),
+(12, 'Seras promovido en tu trabajo debido a tus logros y capacidades.'),
+(13, 'Si sientes estancamiento, busca un nuevo entorno.'),
+(14, 'Alégrate, un camino de hermosas pasiones te espera y debes transitarlo'),
+(15, 'Nunca tendrás que preocuparte por un ingreso estable.'),
+(16, 'Hoy tendrás un día de increíble alegría y brillara tu sentido del humor.'),
+(17, 'Hoy compartirás las horas mas tiernas de tu vida con alguien muy amado.'),
+(18, 'La rueda de la fortuna te favorecerá y estarás rodeado de prosperidad.'),
+(19, 'Tendrás entera satisfacción al final de esta temporada. Prepárate.\r\n'),
+(20, 'Muchos se alegraran por tus logros y a ti te mejorara la vida.\r\n'),
+(21, 'Eres una persona a la que le gusta triunfar en la vida.'),
+(22, 'Confía en tu buen juicio y veras que este te lleva al triunfo.'),
+(23, 'Se te cumplirá un hermoso sueño y veras como otros sueños se hacen realidad.'),
+(24, 'No olvides que un amigo es un regalo que te das a ti mismo.'),
+(25, 'Sabes que es exactamente lo que quieres. Trabaja en ello y hazlo materializarse'),
+(26, 'Siente la felicidad que espera por ti y no olvides atraparla para mantenerla contigo.'),
+(27, 'Puedes aprender mucho de gente que es diferente a ti.'),
+(28, 'La ansiedad nunca te ayudará.\r\n'),
+(29, 'Pronto recibirás buenas noticias de tu pareja.'),
+(30, 'Hay belleza en todo lo que existe, pero no todos pueden verla.'),
+(31, 'Una reunión te traerá buena suerte.'),
+(32, 'Todo saldrá bien.'),
+(33, 'Puede que sea difícil, pero valdrá la pena al final.'),
+(34, '¡Si visualizas tus sueños, se harán realidad!'),
+(35, 'Abre tu mente y tu corazón a cosas buenas.'),
+(36, 'No logras nada con preocuparte.'),
+(37, 'Un viaje se aproxima.'),
+(38, 'Sólo diviértete.'),
+(39, 'Trabaja duro, pero asegúrate de divertirte después.'),
+(40, '¡Si visualizas tus sueños, se harán realidad!');
 
 -- --------------------------------------------------------
 
@@ -56,9 +111,51 @@ INSERT INTO `signo` (`id_signo`, `nombre`, `personalidad`, `color`, `elemento`, 
 (11, 'Géminis', 'Su carácter puede resultar complejo y algo contradictorio, se mueven un poco en la ambigüedad. Pueden ser amables y generosos, pero son capaces de mentirosos y manipuladores. Empiezan cada nuevo proyecto con mucho entusiasmo, pero se desaniman con facilidad. Suelen tener muchos conocidos, pero pocos buenos amigos.', 'Amarillo', 'Aire', 'El elemento aéreo, las comunicaciones, la dualidad, la iniciativa en los negocios, el comercio, el trabajo intelectual, los viajes, los hermanos, los amigos de la infancia, los escritos, los idiomas, la mente concreta.', 'Se te puede presentar una oportunidad única y especial lo que te permitirá cuidarte y mimarte. Entras a la vez en un periodo de mucha independencia personal. Trata de controlarlo bien para que te de buenos resultados. Tendrás muchas posibilidades de estrechar relación y comunicación con la familia, hermanos y amistades, que a la vez son como hermanos, para afrontar decisiones con respecto a otros miembros de más edad con estados de impotencia o de alguna enfermedad. Continuará la buena marcha positiva, aunque podrás hacerte cargo de otra ocupación administrativa relacionado con algo familiar. Podrías tener algún problema de papeleo.   Mejor día 20 y 26.'),
 (12, 'Cáncer', 'Es la personalidad más rara de todo el zodiaco, cuanto menos desconcertante. Pueden ser muy tímidos, incluso aburridos y de repente sacar un lado fascinante y de lo más interesante. A veces puede parecer algo limitado, pero son capaces de ponerse en el sitio del otro y resolver cualquier situación.', 'Blanco, nacarado y plateado', 'Agua', 'La maternidad, los partos, el amor maternal, la familia, la patria, la casa, la cocina, las masas, las mujeres, los ríos, el sentimiento, la imaginación.', 'Si estas en temas que requieran cierta legalidad y piensas en mandarlo todo a paseo, ten calma, en todo caso no te precipites en las apreciaciones de la situación. Sigues en una situación estupenda para tus expectativas de futuro y asuntos profesionales, aprovecha esta oportunidad para entrar en una nueva dinámica en estos asuntos. Trata de huir de las situaciones tensas que se puedan producir a tu alrededor, ya que puedes perder los estribos con mucha facilidad y dada tu actividad frenética en estos momentos, no te conviene para nada, no darías buena imagen el tu entorno. Cuidado con las malas digestiones, que pueden estar producidas por el estrés. Mejor día 21 y 22.');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `signo_chino`
+--
+
+CREATE TABLE `signo_chino` (
+  `id` int(2) NOT NULL,
+  `nombre` varchar(40) COLLATE utf8_spanish_ci NOT NULL,
+  `descripcion` text COLLATE utf8_spanish_ci NOT NULL,
+  `planeta` varchar(15) COLLATE utf8_spanish_ci NOT NULL,
+  `elemento` varchar(15) COLLATE utf8_spanish_ci NOT NULL,
+  `hora_influencia` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `signo_equivalente` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `personalidad` text COLLATE utf8_spanish_ci NOT NULL,
+  `signo_compatible` varchar(100) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `signo_chino`
+--
+
+INSERT INTO `signo_chino` (`id`, `nombre`, `descripcion`, `planeta`, `elemento`, `hora_influencia`, `signo_equivalente`, `personalidad`, `signo_compatible`) VALUES
+(1, 'Cabra', 'se presenta dócil, suave y apresurada, le cuesta expresar sus verdaderas emociones, es difícil descubrir que es lo que pasa en su interior; por eso de repente puede convertirse en un mar de lagrimas sin razón aparente. Con gran tendencia a soñar despierta, necesita sentir apoyo y una guía para poder dedicarse a lo que verdaderamente le entusiasma, vagar en su mundo interior de fantasías. Insegura, necesita sentirse amada y en un ambiente protector. ', 'Saturno', 'Tierra', 'entre las 13:00pm y la 15:00pm', 'Cáncer', 'Creativo, generoso, dócil, intuitivo y modesto, también destacan su honestidad y sinceridad con algo de timidez; se puede confiar en su nobleza y ternura; en su interior son pesimistas, inseguras e introvertidas', 'La Liebre, el Gato o el Conejo, el Cerdo o el Jabalí y el Caballo'),
+(2, 'Caballo', 'Los caballos son los nómades del horóscopo chino, van de un lugar a otro, de proyecto en proyecto, necesita del movimiento y de espacios abiertos; no pueden resistirse al llamado interior de su espíritu libre y a su irrefrenable búsqueda de independencia y libertad.Utiliza cualquier estrategia desde contar chistes, hacerse el gracioso o destacar algún defecto de los presentes; cosa que le pude valer alguna mirada de reproche que ignorara sin culpa. Algunas veces resulta difícil soportarlo, debajo de su aparente diplomacia se esconde una personalidad egoísta e intolerante.', 'Marte', 'Fuego ', 'Junio', 'Géminis', 'Amable, entusiástico, independiente, inteligente, creativo, optimista, fuerte, asertivo, hablador, talentoso, alegre, activo, elocuente, aventurero, versátil, juguetón, alegre, animado, espíritu libre …', 'El Tigre y el Perro'),
+(3, 'Serpiente', 'Las personas nacidas bajo su influencia se las podría llamar "encantadoras de serpientes", dotadas de la sabiduría y elegancia en los movimientos de este animal, son excelentes mediadores, embajadores o músicos virtuosos. La energía de su naturaleza despierta su instinto escurridizo, alerta para descubrir recovecos insólitos en busca de lugares oscuros llenos de misterios. Solitaria, encamina sus planes con discreción y en silencio; su astucia y capacidad de análisis la llevan a estar siempre en el lugar adecuado para no perder las oportunidades. ', 'Marte', 'Fuego', 'entre la 9:00 y las 11:00 de la mañana', 'Piscis', 'Sabia, lógica, creativa, elegante, astuta, materialista, desconfiada, quisquillosa y organizada.', 'Buey o Búfalo y Gallo.'),
+(4, 'Dragón', 'El Dragón simboliza el poder y la riqueza; es el signo del emperador de China; encantador y brillante, despide vitalidad, fuerza y atrae con magnetismo y extravagancia. Las personas nacidas bajo la influencia del Dragón cautivan por su carisma personal y están acompañadas de buena suerte. Se sienten especialmente atraídos por las cosas extrañas y exóticas. ', 'Saturno', 'Tierra', 'entre la 7:00 y las 9:00 de la mañana', 'Aries', 'ambicioso, carismático, noble, magnánimo y poderoso; también puede ser despiadado, arrogante, despótico e intolerante.', 'Rata y Mono'),
+(5, 'Conejo', 'La liebre algo perezosa, actúa con prudencia; es introvertida y reservada con sus cosas. Busca la comodidad y vivir rodeada de lujo, pero su falta de compromiso hace que deje pasar las oportunidades y no se arriesgue. No sirve para sacar las papas del fuego, las dificultades no son su fuerte y menos aun dirigir un equipo. Demasiado sensible para desarrollarse en ambientes competitivos o agresivos. Pero con cualidades innatas para la política y la disciplina; llena de gracia, por lo general es cultivada y educada; y tiene un gran sentido de la justicia.', 'Júpiter ', 'Madera', 'entre la 5:00 y las 7:00 de la mañana', 'Tauro', 'conservador, sensitivos, modestos, discretos, educados; por otro lado algo ingenuos, tímidos y diplomáticos. ', 'Cerdo o Jabalí y la Cabra o la Oveja'),
+(6, 'Tigre', 'Los tigres son personas que necesitan de la aventura, disfrutan plenamente de la vida, siempre que encuentren nuevos retos, desafíos y acontecimientos inesperados. Pero su energía apasionada y su verdadero amor a la vida es contagiosa y estimula.', 'Jupiter', 'Madera ', 'entre la 3:00 y las 5:00 de la mañana', 'Acuario', 'Rebelde, independiente, dinámico, apasionado, osado, impredecible, impulsivo, sincero, cariñoso, generoso, humanitario, impaciente, imprudente, irascible… ', 'Caballo, Perro y Cerdo o Jabalí.'),
+(7, 'Buey', 'El buey o Búfalo representa la prosperidad obtenida con el esfuerzo, la tenacidad y el trabajo. Refleja las características del animal que representa "el Buey"; paciente, incansable en el trabajo, capaz de llevar sobre sus espaldas grandes responsabilidades sin levantar una queja. Su organización y determinación en metas claras y precisas, hacen de él una fuerza imparable que se dirige con obstinación hacia sus objetivos, sorteando complicaciones y manteniendo el equilibrio interior fiel a sus metas ambiciosas. ', 'Saturno', 'Tierra', 'entre la 1:00 y las 3:00 de la mañana', ' Capricornio', 'Metódico, serio, paciente, tenaz, tranquilo, trabajador, ambicioso, tradicional, estable, practico, lógico, obstinado, rígido, intolerante… ', 'Rata, Serpiente y Gallo'),
+(8, 'Rata', 'Es el primer signo o animal del horóscopo chino, ha ganado el primer puesto gracias a su astucia e inteligencia. De naturaleza escurridiza con gran raciocinio e intuición sabe sacar partido de cualquier situación. Con cualidades de líder, pionero y conquistador; utiliza su embriagador encanto para guiar a los otros según sus objetivos. Nunca muestra sus armas, es carismática y apasionada y se lleva la palma en el arte del disimulo. ', 'Mercurio', 'Agua', 'entre las 23:00 y la 1:00 de la mañana', 'Sagitario', 'Disciplinada, meticulosa, sistemática, sociable, inteligente, astuta, superambiciosa, cruel, intolerante, egoísta, trabajadora, ahorrativa…', 'Buey o Búfalo, Mono y Dragón.'),
+(9, 'Cerdo', 'Los Cerdos o Jabalí son considerados los más generosos y honestos de todos los animales del horóscopo chino. Demasiado crédulo, puede ser embaucado con facilidad, no soporta la mentira, las injusticias y la mala fe. Amigo de sus amigos, es comprensivo y tolerante. Idealista le encanta el dinero, pero para gastarlo en su caprichos en compañía de amigos y familiares. ', 'Mercurio', 'Tierra', 'entre las 21:00 y las 23:00 de la noche', 'Escorpion', 'Tolerante, sensible, optimista, honesto, popular, afortunado, fiel, comprensivo y con sentido del humor ', 'La Liebre - Gato - Conejo y la Cabra u Oveja.'),
+(10, 'Perro', 'a persona nacida bajo la influencia de este animal es altruista y con gran empatía; especialmente con los más necesitados o con aquellos que han sufrido algún tipo de injusticia, reacciona con rapidez y valentía. Sus amigos saben que pueden confiar en él, nadie más apropiado para guardar confidencias o permanecer al pie del cañón frente a una crisis. Los Perros nacieron para brindar felicidad, apoyo y consejos.', 'Saturno', 'Tierra ', 'entre las 19:00 y las 21:00 de la tarde', 'Libra', 'Leal, honesto, modesto, elocuente, inteligente, versátil, juguetón, bondadoso, fiel, obediente, instintivo y organizador...', 'El Caballo y el Tigre'),
+(11, 'Gallo', 'El Gallo como jefe supremo del corral es orgulloso (pero de corazón blando), seguro de sí mismo, vanidoso y autoritario. Su lema es ante todo lealtad "llamar las cosas por su nombre", ser francos, abiertos y sinceros, siempre dirán la verdad y mantendrán la palabra dada. Persigue el respeto y la admiración, ante un talante arrollador se esconde un embustero que disfraza su verdadera naturaleza, teme que descubran sus puntos débiles.', 'Venus', 'Metal', 'entre la 17:00 y las 19:00 de la tarde', 'Virgo', 'Ingenioso, valiente, leal, trabajador, talentoso y generoso; también pueden ser orgullosos, curiosos, románticos y les encanta el lujo… ', 'Buey o Búfalo y Serpiente.'),
+(12, 'Mono', 'ersátil y travieso, lo encontramos desempeñando profesiones como la de actores, investigadores, creativos o inventores. Encierra grandes talentos, de mente ágil e inteligente, su naturaleza creativa y excitante curiosidad le convierte en grandes genios de la improvisación. Capta lo que pasa a su alrededor con celeridad, de facilidad de palabra, puede expresarse con audacia y sorprender con sus salidas inspiradoras. Eficaz y practico a la hora de poner en acción los más grandes proyectos. ', 'Venus', 'Metal ', 'entre la 15:00 y las 17:00 de la tarde', 'Leo', 'Inteligente, ingenioso, versátil, noble, generoso e independiente, en su lado más áspero puede mostrarse cínico, inquieto, infiel, voluble…', 'La Rata , el Dragón y el Gallo');
+
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `galleta`
+--
+ALTER TABLE `galleta`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `signo`
@@ -67,16 +164,30 @@ ALTER TABLE `signo`
   ADD PRIMARY KEY (`id_signo`);
 
 --
+-- Indices de la tabla `signo_chino`
+--
+ALTER TABLE `signo_chino`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
+--
+-- AUTO_INCREMENT de la tabla `galleta`
+--
+ALTER TABLE `galleta`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 --
 -- AUTO_INCREMENT de la tabla `signo`
 --
 ALTER TABLE `signo`
   MODIFY `id_signo` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-COMMIT;
-
+--
+-- AUTO_INCREMENT de la tabla `signo_chino`
+--
+ALTER TABLE `signo_chino`
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
