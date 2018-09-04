@@ -28,7 +28,11 @@ int main(int argc,char *argv[])
 /*funciones modulares implementadas en funciones.h*/
 switch(respt){
 				
+<<<<<<< HEAD
 	case 1:
+=======
+			case 1:
+>>>>>>> 048f1a4056ffe7a93cd8b9c831359a07b73de798
     system("clear");		  
 
     printf( "\n   Introduzca d%ca: ", 161 );
