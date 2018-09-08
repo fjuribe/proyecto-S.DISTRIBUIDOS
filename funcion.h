@@ -153,26 +153,24 @@ void calculadora_horoscopo(unsigned d, unsigned m){
 //segundo servicio del sistema hóroscopo
  void horoscopo_semana(int a){
   system("clear");
-<<<<<<< HEAD
+
    /******************conexion**********************/
 	MYSQL *conn,mysql; /* variable de conexión para MySQL */
-=======
+
     /******************conexion**********************/
 	MYSQL *conn; /* variable de conexión para MySQL */
->>>>>>> 048f1a4056ffe7a93cd8b9c831359a07b73de798
+
 	MYSQL_RES *res; /* variable que contendra el resultado de la consuta */
 	MYSQL_ROW row; /* variable que contendra los campos por cada registro consultado */
 	char *server = "127.0.0.1"; /*direccion del servidor 127.0.0.1, localhost o direccion ip */
 	char *user = "root"; /*usuario para consultar la base de datos */
 	char *password = ""; /* contraseña para el usuario en cuestion */
 	char *database = "horoscopo"; /*nombre de la base de datos a consultar */
-<<<<<<< HEAD
 	conn = mysql_init(&mysql); /*inicializacion a nula la conexión */
   	mysql_options(&mysql, MYSQL_SET_CHARSET_NAME, "utf8");
 	mysql_options(&mysql, MYSQL_INIT_COMMAND, "SET NAMES utf8");
-=======
+
 	conn = mysql_init(NULL); /*inicializacion a nula la conexión */
->>>>>>> 048f1a4056ffe7a93cd8b9c831359a07b73de798
 
 	/* conectar a la base de datos */
 	if (!mysql_real_connect(conn, server, user, password, database, 0, NULL, 0))
@@ -187,11 +185,9 @@ switch(a){
 case 1:
     //printf("piscis");
 
-<<<<<<< HEAD
  /******** enviar consulta SQL *****/
-=======
+
     /******** enviar consulta SQL *****/
->>>>>>> 048f1a4056ffe7a93cd8b9c831359a07b73de798
 	if (mysql_query(conn, "select nombre,color,personalidad,elemento,semanal from signo where id_signo=8"))
 	{ /* definicion de la consulta y el origen de la conexion */
 		fprintf(stderr, "%s\n", mysql_error(conn));
